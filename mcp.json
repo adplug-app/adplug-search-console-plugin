@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "adplug-search-console": {
+      "type": "http",
+      "url": "https://api.adplug.app/mcp/google-search-console"
+    }
+  }
+}

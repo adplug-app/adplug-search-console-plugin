@@ -1,0 +1,36 @@
+{
+  "name": "adplug-search-console",
+  "displayName": "AdPlug: Google Search Console",
+  "version": "1.0.0",
+  "description": "Safely connect Google Search Console to Grok, Grok Bot and Cursor, so your agent can check rankings and clicks, find pages losing traffic, explain why a page isn't indexed and submit the sitemaps you approve.",
+  "author": {
+    "name": "AdPlug",
+    "email": "support@adplug.app"
+  },
+  "publisher": "MEANDATA IT SRL",
+  "homepage": "https://adplug.app/integrations/google-search-console",
+  "repository": "https://github.com/adplug-app/adplug-search-console-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "adplug",
+    "google-search-console",
+    "search-console",
+    "gsc",
+    "seo",
+    "organic-search",
+    "indexing",
+    "sitemaps",
+    "core-web-vitals",
+    "rankings",
+    "mcp"
+  ],
+  "category": "integrations",
+  "tags": [
+    "seo",
+    "marketing",
+    "analytics",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.json"
+}
