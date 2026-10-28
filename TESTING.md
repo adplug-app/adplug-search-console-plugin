@@ -2,9 +2,9 @@
 
 For marketplace reviewers. The login's password is in AdPlug's submission form (or ask support@adplug.app).
 
-These steps take about 10 minutes. The Search Console property on this login is our own, with view-only access. Please preview changes but don't apply any.
+These steps take about 10 minutes. The Search Console property on this login, adplug.app, is our own, and the Google account behind it has Restricted (view-only) access. You can preview changes, but please don't apply any.
 
-1. Install it.
+1. Install AdPlug: Google Search Console.
    - In Grok Bot: open Connect apps in the sidebar (on the phone: tap your avatar, then Connect apps), find AdPlug: Google Search Console, click Add, then Authenticate.
    - In Cursor: run /add-plugin adplug-search-console in a chat, or install it from the Marketplace.
    - In Grok (grok.com): open Plugins in the sidebar, click New Connector, choose Custom, enter the name AdPlug Search Console and the server URL https://api.adplug.app/mcp/google-search-console , then Add Connector.
@@ -18,6 +18,7 @@ These steps take about 10 minutes. The Search Console property on this login is 
 
 4. Check the connection. Ask:
    - Which Search Console properties can you see, and how did each one do over the last 28 days?
+   - Expected: one property, sc-domain:adplug.app, listed as a restricted user (read-only in Search Console).
 
 5. Try a few analyses, one at a time:
    - Compare the last 28 days with the 28 before on adplug.app: which pages and queries gained or lost the most clicks, and why?
@@ -25,10 +26,10 @@ These steps take about 10 minutes. The Search Console property on this login is 
    - Inspect https://adplug.app/pricing. Is it indexed? Compare what Google saw with the live page.
    - Check the sitemaps for adplug.app and audit the URLs inside.
 
-6. Preview one change without applying it. Send:
+6. Try one change without applying it. Send:
    - Preview submitting https://adplug.app/sitemap.xml as a sitemap for adplug.app. Don't apply it.
-   - You should get a preview of the exact change, and nothing changes. AdPlug only applies a Search Console change when the execute tool is called with that preview's ID, and this login's Google access is view-only, so Google would refuse it anyway.
+   - Expected: AdPlug refuses before it makes a preview, because this login's Google account is a restricted user on adplug.app and Search Console only lets owners and full users change sitemaps. Nothing changes. With full access you'd get a preview of the exact change, and AdPlug only applies a Search Console change when the execute tool is called with that preview's ID.
 
-7. Optional, removing it: in Grok Bot, open Connect apps, select it and click Disconnect. In Cursor, uninstall the plugin or remove the server.
+7. Optional, removing it: in Grok Bot, open Connect apps, select AdPlug: Google Search Console and click Disconnect. In Cursor, uninstall the plugin or remove the server.
 
 8. Questions or problems: support@adplug.app. Daniel Popa, AdPlug's founder, will reply, usually the same business day.

@@ -1,6 +1,6 @@
 # AdPlug: Google Search Console for Grok Bot and Cursor
 
-AdPlug is a hosted MCP server that safely connects Google Search Console to Grok, Grok Bot and Cursor.
+AdPlug is a hosted MCP server that safely connects Google Search Console to Grok Bot and Cursor.
 
 Your agent can check rankings and clicks, find the pages losing traffic, explain why a page isn't indexed and, on a paid plan, submit the sitemaps you approve.
 
@@ -39,21 +39,21 @@ The first time you connect, a browser tab opens on AdPlug's sign-in. Sign in, or
 
 ## What you need
 
-- An AdPlug account. The free plan connects one platform, comes with a monthly request limit and is view only: your agent can read your Search Console data and preview changes, but not apply them. A paid plan lets the agent make changes and connect more Google accounts (3 on Pro, 5 on Max): see [adplug.app/pricing](https://adplug.app/pricing).
+- An AdPlug account. The free plan connects one platform, comes with a monthly request limit and is view only: your agent can read your Search Console data and preview changes, but not apply them. A paid plan lets the agent make changes and connect more Google accounts (3 on Pro, 5 on Max and Agency): see [adplug.app/pricing](https://adplug.app/pricing).
 - Search Console connected once in AdPlug, at [adplug.app/dashboard/connections](https://adplug.app/dashboard/connections), with your Google sign-in.
 
 There's no API key or client ID to set up. Sign-in is OAuth 2.1 with dynamic client registration and PKCE.
 
 ## What your agent can do
 
-- **Properties:** every Domain and URL-prefix property your Google account can use, or a one-call overview of all of them with 28-day totals (handy for agencies).
+- **Properties:** every Domain and URL-prefix property your connected Google accounts can use, or a one-call overview of up to 50 verified properties with 28-day totals and the change on the 28 days before (handy for agencies).
 - **Reports:** clicks, impressions, CTR and average position by query, page, country, device, search appearance, day, week, month or hour. Web, image, video, news, Discover and Google News, with filters, regex and period comparison.
-- **Ready-made analyses, worked out on AdPlug's server so the numbers are exact:** what changed, anomalies, declining pages, striking-distance queries, CTR opportunities, cannibalisation, new and lost queries, brand versus non-brand, the CTR shift that shows AI Overviews' footprint, Core Web Vitals, and paid versus organic when Google Ads is connected to the same AdPlug account.
+- **Ready-made analyses, calculated on AdPlug's server so the agent doesn't do the maths itself:** what changed, anomalies, declining pages, striking-distance queries, CTR opportunities, cannibalisation, new and lost queries, brand versus non-brand, CTR by position against a year ago (the measurable footprint of AI Overviews and other search features), Core Web Vitals from Chrome UX Report data, and paid versus organic when Google Ads is connected to the same AdPlug account.
 - **URL inspection:** up to 25 URLs at a time, Google's index status next to what the live page says now, and what changed since AdPlug last inspected it.
 - **Sitemaps:** Search Console's status for each one, sitemaps listed in robots.txt, and a live audit of the URLs inside with an estimated indexed share.
 - **Changes:** submit or remove a sitemap, add or remove a property.
 
-What Google's API doesn't offer, so AdPlug can't either: **Request indexing** for normal pages, and the Page indexing, Links, Manual actions, Security issues and Crawl stats reports, removals and disavow. Your agent sends you to Search Console for those.
+Google's API has no **Request indexing** for normal pages, no Page indexing, Links, Manual actions, Security issues or Crawl stats reports, and no removals or disavow, so AdPlug can't do those either. AdPlug tells your agent to send you to Search Console for them.
 
 `adplug_get_status` tells the agent whether Search Console is connected and what your plan allows.
 
@@ -76,7 +76,7 @@ What Google's API doesn't offer, so AdPlug can't either: **Request indexing** fo
 
 Every tool call goes to one endpoint, `https://api.adplug.app/mcp/google-search-console`. Sign-in goes through AdPlug's pages on adplug.app and its sign-in provider, Supabase (named in api.adplug.app's OAuth metadata). The plugin adds no software and runs no scripts on your computer.
 
-Search Console data travels between Google and your agent through AdPlug's servers at api.adplug.app. Reports are fetched live and not kept. AdPlug keeps the results of URL inspections so it can tell you what changed since the last one, keeps a change preview for up to two days so it can be applied, and logs each call's tool and time for your usage page, never its arguments or results. Google sign-in tokens are stored encrypted.
+Search Console data travels between Google and your agent through AdPlug's servers at api.adplug.app. Reports are fetched live and not kept. For URL inspections and sitemap audits, AdPlug's server also fetches your public pages, robots.txt and sitemaps, the way a crawler would. AdPlug keeps each inspected URL's index status so it can tell you what changed since the last inspection. It keeps a change preview so it can be applied within 15 minutes, then deletes it within two days. It logs each call's tool and time for your usage page, never its arguments or results. Google sign-in tokens are stored encrypted.
 
 This repo holds the plugin manifest (`.cursor-plugin/plugin.json`), the server address (`mcp.json`), the logo, this README, a testing guide, a changelog and the licence.
 
@@ -90,7 +90,7 @@ This repo holds the plugin manifest (`.cursor-plugin/plugin.json`), the server a
 - Website: [adplug.app/integrations/google-search-console](https://adplug.app/integrations/google-search-console)
 - Setup guide: [adplug.app/guides/google-search-console](https://adplug.app/guides/google-search-console)
 - Plans: [adplug.app/pricing](https://adplug.app/pricing)
-- AdPlug's ad platforms (Google Ads, Meta Ads, LinkedIn Ads and Microsoft Ads) have their own plugin: [adplug-app/adplug-cursor-plugin](https://github.com/adplug-app/adplug-cursor-plugin)
+- AdPlug's ad platforms (Google Ads, LinkedIn Ads, Microsoft Ads and, in early access, Meta Ads) have their own plugin: [adplug-app/adplug-cursor-plugin](https://github.com/adplug-app/adplug-cursor-plugin)
 
 ## Licence
 

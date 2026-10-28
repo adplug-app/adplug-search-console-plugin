@@ -2,7 +2,7 @@
   "name": "adplug-search-console",
   "displayName": "AdPlug: Google Search Console",
   "version": "1.0.0",
-  "description": "Safely connect Google Search Console to Grok, Grok Bot and Cursor, so your agent can check rankings and clicks, find pages losing traffic, explain why a page isn't indexed and submit the sitemaps you approve.",
+  "description": "Safely connect Google Search Console to Grok, Grok Bot and Cursor, so your agent can check rankings and clicks, find pages losing traffic, explain why a page isn't indexed and, on a paid plan, submit the sitemaps you approve.",
   "author": {
     "name": "AdPlug",
     "email": "support@adplug.app"
