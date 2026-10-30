@@ -90,7 +90,7 @@ This repo holds the plugin manifest (`.cursor-plugin/plugin.json`), the server a
 - Website: [adplug.app/integrations/google-search-console](https://adplug.app/integrations/google-search-console)
 - Setup guide: [adplug.app/guides/google-search-console](https://adplug.app/guides/google-search-console)
 - Plans: [adplug.app/pricing](https://adplug.app/pricing)
-- AdPlug's ad platforms (Google Ads, LinkedIn Ads, Microsoft Ads and, in early access, Meta Ads) have their own plugin: [adplug-app/adplug-cursor-plugin](https://github.com/adplug-app/adplug-cursor-plugin)
+- AdPlug's ad platforms (Google Ads, Meta Ads, LinkedIn Ads and Microsoft Ads) have their own plugin: [adplug-app/adplug-cursor-plugin](https://github.com/adplug-app/adplug-cursor-plugin)
 
 ## Licence
 
